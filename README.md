@@ -32,8 +32,8 @@ Using `gmr` to get better information on using docker cli with the help of opena
 cargo run -- --command docker
 ```
 **Output 👇**
+![preview1](https://github.com/d1pankarmedhi/ghr/assets/136924835/740ee0f4-59e6-4d6a-b622-d31825f7f0ab)
 
-![sample preview](.github/image/preview1.png)
 <!-- 
 ```text
 Here are some user-friendly examples to help you understand what the Docker tool does:
