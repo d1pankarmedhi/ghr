@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 Clone the repository.
 ```bash
-git clone <url>
+git clone https://github.com/d1pankarmedhi/ghr.git
 ```
 
 Build the project dependencies
@@ -32,6 +32,9 @@ Using `gmr` to get better information on using docker cli with the help of opena
 cargo run -- --command docker
 ```
 **Output 👇**
+
+![sample preview](.github/image/preview1.png)
+<!-- 
 ```text
 Here are some user-friendly examples to help you understand what the Docker tool does:
 
@@ -76,7 +79,7 @@ Here are some user-friendly examples to help you understand what the Docker tool
     - Example: docker search mysql
 
 These are just a few examples of the commands you can use with Docker. For more information and a complete list of commands, you can visit the official Docker documentation at https://docs.docker.com/go/guides/.
-```
+``` -->
 
 
 ## 🛠 Built With
