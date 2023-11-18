@@ -1,0 +1,6 @@
+/target
+
+*.env
+
+# lock files
+*.lock 
