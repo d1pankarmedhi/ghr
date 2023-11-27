@@ -19,6 +19,11 @@ Build the project dependencies
 cargo build
 ```
 
+Make sure to set your openai key as environment variable
+```bash
+export OPENAI_API_KEY=<api-key>
+```
+
 Run project
 ```bash 
 cargo run -- --command docker # replace docker with your tool of choice.
@@ -42,7 +47,7 @@ You can run the **main.py** file or run the binary inside the **target** directo
 
 Use `cargo build --release` to build a smaller and optimized binary for release. 
 
-> Run the binary, for example `./target/release/ghr --command docker`.
+Run the binary, for example `./target/release/ghr --command docker`.
 
 ## 🛠 Built With
 
