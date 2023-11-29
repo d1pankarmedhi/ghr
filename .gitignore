@@ -4,3 +4,6 @@
 
 # lock files
 *.lock 
+
+# text file
+*.txt
