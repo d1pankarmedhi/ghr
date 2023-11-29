@@ -26,28 +26,34 @@ export OPENAI_API_KEY=<api-key>
 
 Run project
 ```bash 
-cargo run -- --command docker # replace docker with your tool of choice.
+cargo run 
 ```
 
 ## 📎 Example
 
 
-Using `ghr` to get better information on using docker cli with the help of openai.
+Generating **Dockerfile** template for a python fastapi server using **ghr**.
 
 ```bash
-cargo run -- --command docker
+cargo run
 ```
-**Output 👇**
+### Output
 
-![preview1](https://github.com/d1pankarmedhi/ghr/assets/136924835/740ee0f4-59e6-4d6a-b622-d31825f7f0ab)
+![preview](https://github.com/d1pankarmedhi/ghr/assets/136924835/a6cecf3d-6685-407a-94e8-300d429ea9d5)
 
-**Build and run binary**
+
+### Build and run Binary
 
 You can run the **main.py** file or run the binary inside the **target** directory, produced after building the project. 
 
 Use `cargo build --release` to build a smaller and optimized binary for release. 
 
-Run the binary, for example `./target/release/ghr --command docker`.
+### Todo
+- [x] OpenAI response processing
+- [x] File saving
+- [] Error handling
+- [] Support for code template
+
 
 ## 🛠 Built With
 
