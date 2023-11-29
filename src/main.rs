@@ -41,20 +41,19 @@ async fn main() -> Result<(),Box<dyn std::error::Error>>{
     PrintCommand::SYSResponse.print_response("Generating response...");
 
     // response 
-    let mut res_str = String::new();
     let res = call_gpt(messages).await;
     match res {
         Ok(r) => {
             let res_str = extract_code(r)?;
             PrintCommand::AIResponse.print_response(&res_str);
-            
+
             let save_file = user_input("Enter a filename to save this into a file OR press ENTER")?;
             
             if save_file.is_empty() {
                 PrintCommand::AIResponse.print_response("Exiting program!");
                 std::process::exit(0);
             } else {
-                write_to_file(&res_str, &save_file);
+                let _ = write_to_file(&res_str, &save_file);
                 PrintCommand::AIResponse.print_response(format!("File {} saved.", &save_file).as_str());
             }
         },

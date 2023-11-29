@@ -46,6 +46,6 @@ mod tests {
 
     #[test]
     fn test_write_to_file() {
-        write_to_file("asdfsdf", "test.txt");
+        let _ = write_to_file("asdfsdf", "test.txt");
     }
 }
