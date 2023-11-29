@@ -5,6 +5,9 @@ use clap::Parser;
 pub struct Arguments {
     #[arg(short, long)]
     pub command: String,
+
+    #[arg(short, long)]
+    pub query: String
 }
 
 

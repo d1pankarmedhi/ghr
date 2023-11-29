@@ -1,5 +1,6 @@
-use std::process::Command;
-use std::io::stdout;
+use std::error::Error;
+use std::{process::Command, io::Stdin};
+use std::io::{stdout, stdin};
 
 use crossterm::{
     style::{Color, ResetColor, SetForegroundColor},
@@ -13,7 +14,7 @@ pub enum PrintCommand {
 }
 
 impl PrintCommand{
-    pub fn print_ai_response(&self, statement: &str) {
+    pub fn print_response(&self, statement: &str) {
         let mut stdout = stdout();
         let statement_color = match self{
             Self::AIResponse => Color::Cyan,
@@ -28,11 +29,21 @@ impl PrintCommand{
     }
 }
 
-pub fn command_line(command: String) -> String {
+pub fn get_help_str(command: String) -> String {
     let output = Command::new(command).arg("--help").output().unwrap();
     let res = String::from_utf8(output.stdout).unwrap();
     res
 }
+
+pub fn user_input(sys_message: &str) -> Result<String, Box<dyn Error>> {
+    PrintCommand::SYSResponse.print_response(sys_message);
+    let mut input = String::new();
+    std::io::stdin().read_line(&mut input).expect("Failed to read lines");
+    Ok(input.trim().to_string())
+}
+
+
+
 
 #[cfg(test)]
 mod tests {
@@ -40,14 +51,16 @@ mod tests {
     use super::*;
 
     #[test]
-    fn tests_command_line() {
-        let res = command_line("docker".to_string());
+    fn tests_get_help_str() {
+        let res = get_help_str("docker".to_string());
         dbg!(res);
     }
 
     #[test]
     fn test_print_ai_response() {
-        PrintCommand::SYSResponse.print_ai_response("AI Response below");
-        PrintCommand::AIResponse.print_ai_response("How are you");
+        PrintCommand::SYSResponse.print_response("AI Response below");
+        PrintCommand::AIResponse.print_response("How are you");
     }
+
+    
 }

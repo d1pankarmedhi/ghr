@@ -54,11 +54,11 @@ mod tests {
     async fn tests_call_gpt() {
         let message1 = Message {
             role: "system".to_string(),
-            content: "You are a helpful assistant.".to_string(),
+            content: "You are a helpful assistant who generates helpful commands for the tool and question asked by the user. Make sure to only generate the code inside ``` ```. Return 'Command not found` if the question is not about computer science.".to_string(),
         };
         let message2 = Message {
             role: "user".to_string(),
-            content: "Hi, can you help me".to_string(),
+            content: "linux command to delete directories".to_string(),
         };
 
         let messages = vec![message1, message2];
