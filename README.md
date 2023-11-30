@@ -3,7 +3,7 @@
 [![made-with-rust](https://img.shields.io/badge/Made%20with-Rust-1f425f.svg)](https://www.rust-lang.org/)
 
 
-Generative Helper in Rust | A command line tool to replace *help* and *man* in linux for helping developers get structured information about any tool installed locally.
+Generative Helper in Rust | GHR | - A command line tool to help developers generate boilerplate code templates.
 
 ## 🏃 Getting Started
 
@@ -51,8 +51,8 @@ Use `cargo build --release` to build a smaller and optimized binary for release.
 ### Todo
 - [x] OpenAI response processing
 - [x] File saving
-- [] Error handling
-- [] Support for code template
+- [ ] Error handling
+- [ ] Support for code template
 
 
 ## 🛠 Built With
