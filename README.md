@@ -5,6 +5,15 @@
 
 Generative Helper in Rust | GHR | - A command line tool to help developers generate boilerplate code templates.
 
+## 🍬 Highlevel architechture/design
+<div align="center">
+  <img src="https://github.com/d1pankarmedhi/ghr/assets/136924835/789878a6-6da2-44d1-bab3-e2592301318c" width=600/>
+</div>
+
+## 🕴 Preview
+
+![preview](https://github.com/d1pankarmedhi/ghr/assets/136924835/a6cecf3d-6685-407a-94e8-300d429ea9d5)
+
 ## 🏃 Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
@@ -37,9 +46,6 @@ Generating **Dockerfile** template for a python fastapi server using **ghr**.
 ```bash
 cargo run
 ```
-### Output
-
-![preview](https://github.com/d1pankarmedhi/ghr/assets/136924835/a6cecf3d-6685-407a-94e8-300d429ea9d5)
 
 
 ### Build and run Binary
